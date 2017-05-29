@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/code_welcome.js"></script>
 	<script type="text/javascript" src="js/islog.js"></script>
-	<!-- <script type="text/javascript" src="http://zxd-1253592841.file.myqcloud.com/js/mymouse.js" id="mymouse"></script> -->
+	<script type="text/javascript" src="http://zxd-1253592841.file.myqcloud.com/js/moment.js"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.js"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -149,7 +149,7 @@
 			<!-- 发布动态的组件 -->
 			<div id="input-text">
 				<form action="publishMessage" method="post">
-					<textarea  class="form-control" style="min-height: 82px;" id="saysomething"  placeholder="说点什么吧" required=""></textarea>
+					<textarea  class="form-control" style="min-height: 82px;" id="saysomething"  placeholder="说点什么吧"></textarea>
 					<button type="button" class="btn" id="publishmessage" style="margin-left:500px; margin-top:3px;margin-right: 30px;width: 120px; position:absolute; z-index: 12;">发布</button>
 				</form>
 			</div>
@@ -224,6 +224,10 @@
 		<!-- 右侧信息栏 -->
 		<div id="right-info">
 			
+			<div id="showmonth" style="width: 100%;height: 245px;">
+				<img id="monthimg" src="http://zxd-1253592841.file.myqcloud.com/img/bonus_1.jpg" style="height: 100%;width: 100%">
+			</div>
+
 		</div>
 	</div>
 
