@@ -51,6 +51,7 @@
 
 			<div style="margin-right: 10px;  margin-top: 8px;  float: right;">
 				<font style="font-family: 微软雅黑 ;" id="js-name">${sessionScope.student.getName()} </font>
+				<font style="font-family: 微软雅黑 ; visibility: hidden;" id="js-username">${sessionScope.student.getUsername()} </font>
 			</div>	
 
 		</nav>
@@ -206,15 +207,71 @@
 		
 						
 											 
-											<div class="collapse" id="rep_msg_${id}" style="float: right;">
+											<div class="collapse" id="rep_msg_${id}" style="float: right; ">
 												  <div id="reply-page">
 													<form action="" method="post">
-														<textarea  class="form-control" style="min-height: 82px;" id="reply-text">评论功能还在开发中</textarea>
-														<button type="button" class="btn" id="publishreply" style="">发表</button>
+														<textarea  class="form-control" style="min-height: 82px;" id="reply_text_${id}"></textarea>
+														<button type="button" class="btn"  onclick="publishreply('${id}')">发表</button>
 													</form>
 												</div>
 											</div>
 										</div>
+
+										
+										<s:if test="#m.replies==null || #m.replies.size()<1">
+											<div style="text-align: center; margin-top: 32px;">
+												<span type="text" class="text-muted" style="text-align: center;">--评论区--</span>
+											</div>
+											<div style="float: left; margin-top: 8px;" class="text-muted">暂无评论</div>
+											
+											<div id="replydingwei_${id}" style="display: none;"></div>
+
+											<div id="newreply" style="float: left; margin-top: 8px; display: none;">
+													<div class="input-group">
+											            <span class="input-group-addon" id="newreply_name"></span>
+											            <span type="text" class="form-control" id="newreply_content"></span>
+											        </div>
+											</div>
+											
+										</s:if>
+										
+										
+										<s:else>
+												
+												
+											<div style="text-align: center; margin-top: 32px;">
+												<span type="text" style="text-align: center;">--评论区--</span>
+											</div>
+											
+											
+											<s:iterator value="#m.replies" var="r">
+											
+												<div id="replys_${r.id}" style="float: left; margin-top: 8px;">
+													<div class="input-group">
+											            <span class="input-group-addon">${r.ustudent.name}</span>
+											            <span type="text" class="form-control">${r.content}</span>
+											        </div>
+												</div>
+											
+											
+											</s:iterator>
+
+
+											<div id="replydingwei_${id}" style="display: none;"></div>
+
+											<div id="newreply" style="float: left; margin-top: 8px; display: none;">
+													<div class="input-group">
+											            <span class="input-group-addon" id="newreply_name"></span>
+											            <span type="text" class="form-control" id="newreply_content"></span>
+											        </div>
+											</div>
+										
+										</s:else>
+
+
+
+
+
 								  </div>
 		
 								</div>
