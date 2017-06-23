@@ -135,7 +135,7 @@
             <column name="EVALUATE" />
         </property>
         
-        <many-to-one name="student" class="com.ssh.model.Student" fetch="join" unique="true" cascade="save-update" lazy="false">
+       <many-to-one name="student" class="com.ssh.model.Student"  fetch="join" lazy="false" unique="true">
             <column name="uid" />
         </many-to-one>
     </class>

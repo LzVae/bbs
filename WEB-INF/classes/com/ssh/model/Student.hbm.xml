@@ -24,6 +24,6 @@
             <column name="DESCRIPTION" />
         </property>
         
-        <one-to-one name="score" class="com.ssh.model.Score" property-ref="student" cascade="save-update" lazy="false"></one-to-one>
+       
     </class>
 </hibernate-mapping>
