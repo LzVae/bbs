@@ -184,7 +184,7 @@
 						</div>
 
 
-							<s:iterator value="#application.messages" var="m">
+							<s:iterator value="#session.messages" var="m">
 
 								<div class="panel panel-default" id="msg_${id}">
 								  <div class="panel-heading">${m.student.name} <font style="float: right; margin-right: 5px;">发表于：${m.createtime}</font>
