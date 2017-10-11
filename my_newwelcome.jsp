@@ -20,7 +20,7 @@
 	
 	
 	
-	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://libs.cdnjs.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/welcomestyle.css">
 	<link rel="stylesheet" href="css/jPages.css">
 	<link rel="stylesheet" href="css/animate.css">
